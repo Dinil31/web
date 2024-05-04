@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4; /* Body background color */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #444;
+        }
+
+       .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff; /* Container background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adding shadow for container */
+        }
+
+        h1 {
+            text-align: left;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        /* Menu bar styles */
+        .menu-bar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            text-align: right; /* Align menu items to the right */
+        }
+
+        .menu-bar a {
+            float: none; /* Remove float */
+            display: inline-block; /* Display as block element */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .menu-bar a:hover {
+            background-color: #555;
+        }
+
+        .menu-bar a.active {
+            background-color: #4CAF50;
+        }
+
+        .hobby-section {
+            background-size: cover;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hobby-section h2 {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 0;
+            color: #333;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hobby-section p {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: -15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        
+            .hobby-section {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+
+
+        }
+
+        .resources-section {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .resources-section h2 {
+            color: #333;
+            font-weight: 700;
+            margin-top: 0;
+        }
+
+        .resources-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resources-section li {
+            margin-bottom: 10px;
+        }
+
+        .resources-section li a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .resources-section li a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Hobbies</h1>
+
+        <div class="menu-bar">
+            <a class="active" href="#home">Home</a>
+            <a href="#photography">Photography</a>
+            <a href="#gardening">Gardening</a>
+            <a href="#cooking">Cooking</a>
+            <a href="#resources">Resources</a>
+        </div>
+
+        <div class="hobby-section" style="background-image: url('https://images.shiksha.com/mediadata/images/articles/1568193656phpmWI2xq.jpeg');">
+            <div class="background-image"></div>
+            <h2 id="photography">Photography <i class="fas fa-camera"></i></h2>
+            <p>Photography is a creative hobby that allows you to capture moments, express yourself, and explore the world through images. Whether you're snapping photos of breathtaking landscapes, candid portraits, or intricate still lifes, photography offers endless opportunities for artistic expression and storytelling.</p>
+        </div>
+
+        <div class="hobby-section" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/proud-gardener-royalty-free-image-539829042-1555499812.jpg?crop=0.88847xw:1xh;center,top&resize=1200:*');">
+            <div class="background-image"></div>
+            <h2 id="gardening">Gardening <i class="fas fa-seedling"></i></h2>
+            <p>Gardening is a rewarding hobby that allows you to connect with nature, cultivate beautiful plants, and enjoy the outdoors. From planting seeds and nurturing seedlings to watching your garden flourish with colorful blooms and delicious fruits and vegetables, gardening provides a sense of accomplishment and tranquility.</p>
+        </div>
+
+        <div class="hobby-section" style="background-image: url('https://media.npr.org/assets/img/2023/01/31/120522_fitmencook_kathytran_img_6651_custom-dcdb96876448565cd6ea39cb433b080b82383560-s1100-c50.jpg');">
+            <div class="background-image"></div>
+            <h2 id="cooking">Cooking <i class="fas fa-utensils"></i></h2>
+            <p>Cooking is a delicious hobby that allows you to experiment with flavors, create culinary masterpieces, and share meals with loved ones. Whether you're following a family recipe, trying out a new cuisine, or improvising with whatever ingredients you have on hand, cooking is a fun and creative way to nourish both body and soul.</p>
+        </div>
+
+        <div class="resources-section">
+            <h2 id="resources">Resources <i class="fas fa-book"></i></h2>
+            <ul>
+                <li><a href="https://www.allrecipes.com/">Allrecipes</a> - A comprehensive collection of recipes, cooking tips, and culinary inspiration.</li>
+                <li><a href="https://www.gardeningknowhow.com/">Gardening Know How</a> - Expert advice, gardening articles, and helpful tips for gardeners of all levels.</li>
+                <li><a href="https://digital-photography-school.com/">Digital Photography School</a> - Tutorials, guides, and resources to help you improve your photography skills.</li>
+            </ul>
+        </div>
+
+    
+        <iframe width ="560" height="255" style="border:none;"
+        src = "iframe.html"> </iframe>
+</body>
+</html>
+
+
+
+
