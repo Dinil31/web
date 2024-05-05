@@ -15,7 +15,7 @@
             color: #444;
         }
 
-       .container {
+        .container {
             max-width: 800px;
             margin: auto;
             padding: 20px;
@@ -25,10 +25,13 @@
         }
 
         h1 {
-            text-align: left;
+            text-align: center;
             color: #333;
             margin-bottom: 30px;
             font-weight: 700;
+            margin-top: 0;
+            padding-top: 20px;
+            border-top: 2px solid #f66335;
         }
 
         /* Menu bar styles */
@@ -51,6 +54,10 @@
             transition: background-color 0.3s ease-in-out;
         }
 
+        .menu-bar a i {
+            margin-right: 5px; /* Add space between icon and text */
+        }
+
         .menu-bar a:hover {
             background-color: #555;
         }
@@ -63,13 +70,16 @@
             background-size: cover;
             border-radius: 8px;
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 40px;
             position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 400px; /* Adjust height as needed */
         }
 
         .hobby-section h2 {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             margin-top: 0;
             color: #333;
@@ -77,39 +87,131 @@
             transition: all 0.3s ease-in-out;
             position: relative;
             z-index: 1;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
 
         .hobby-section p {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             margin-top: -15px;
             position: relative;
             z-index: 1;
         }
 
-        
-            .hobby-section {
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    padding: 20px;
-    position: relative;
+        /* Full screen menu */
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            overflow: auto;
+        }
 
+        .menu-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
 
+        .menu-overlay a {
+            display: block;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .menu-overlay a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: #f66335;
+        }
+
+        .social-icons {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f66335;
+        }
+
+        /* Decorative elements */
+        .decorative-1,
+        .decorative-2,
+        .decorative-3 {
+            background-size: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 400px; /* Adjust height as needed */
         }
 
         .resources-section {
-            background-color: #fff;
+            background-color: #f9f9f9;
             border-radius: 8px;
             padding: 20px;
+            margin-bottom: 30px;
         }
 
         .resources-section h2 {
             color: #333;
             font-weight: 700;
             margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
         }
 
         .resources-section ul {
@@ -134,34 +236,37 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>My Hobbies</h1>
+<div class="container">
+    <h1>My Hobbies</h1>
 
-        <div class="menu-bar">
-            <a class="active" href="#home">Home</a>
-            <a href="#photography">Photography</a>
-            <a href="#gardening">Gardening</a>
-            <a href="#cooking">Cooking</a>
-            <a href="#resources">Resources</a>
-        </div>
+    <div class="menu-bar">
+        <a class="active" href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#photography"><i class="fas fa-camera"></i> Photography</a>
+        <a href="#gardening"><i class="fas fa-seedling"></i> Gardening</a>
+        <a href="#cooking"><i class="fas fa-utensils"></i> Cooking</a>
+        <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+    </div>
 
-        <div class="hobby-section" style="background-image: url('https://images.shiksha.com/mediadata/images/articles/1568193656phpmWI2xq.jpeg');">
-            <div class="background-image"></div>
-            <h2 id="photography">Photography <i class="fas fa-camera"></i></h2>
+    <div class="decorative-1" style="background-image: url('https://images.shiksha.com/mediadata/images/articles/1568193656phpmWI2xq.jpeg');">
+        <div class="hobby-section">
+            <h2 id="photography">Photography</h2>
             <p>Photography is a creative hobby that allows you to capture moments, express yourself, and explore the world through images. Whether you're snapping photos of breathtaking landscapes, candid portraits, or intricate still lifes, photography offers endless opportunities for artistic expression and storytelling.</p>
         </div>
+    </div>
 
-        <div class="hobby-section" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/proud-gardener-royalty-free-image-539829042-1555499812.jpg?crop=0.88847xw:1xh;center,top&resize=1200:*');">
-            <div class="background-image"></div>
-            <h2 id="gardening">Gardening <i class="fas fa-seedling"></i></h2>
+    <div class="decorative-2" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/proud-gardener-royalty-free-image-539829042-1555499812.jpg?crop=0.88847xw:1xh;center,top&resize=1200:*');">
+        <div class="hobby-section">
+            <h2 id="gardening">Gardening</h2>
             <p>Gardening is a rewarding hobby that allows you to connect with nature, cultivate beautiful plants, and enjoy the outdoors. From planting seeds and nurturing seedlings to watching your garden flourish with colorful blooms and delicious fruits and vegetables, gardening provides a sense of accomplishment and tranquility.</p>
         </div>
+    </div>
 
-        <div class="hobby-section" style="background-image: url('https://media.npr.org/assets/img/2023/01/31/120522_fitmencook_kathytran_img_6651_custom-dcdb96876448565cd6ea39cb433b080b82383560-s1100-c50.jpg');">
-            <div class="background-image"></div>
-            <h2 id="cooking">Cooking <i class="fas fa-utensils"></i></h2>
+    <div class="decorative-3" style="background-image: url('https://media.npr.org/assets/img/2023/01/31/120522_fitmencook_kathytran_img_6651_custom-dcdb96876448565cd6ea39cb433b080b82383560-s1100-c50.jpg');">
+        <div class="hobby-section">
+            <h2 id="cooking">Cooking</h2>
             <p>Cooking is a delicious hobby that allows you to experiment with flavors, create culinary masterpieces, and share meals with loved ones. Whether you're following a family recipe, trying out a new cuisine, or improvising with whatever ingredients you have on hand, cooking is a fun and creative way to nourish both body and soul.</p>
         </div>
+    </div>
 
         <div class="resources-section">
             <h2 id="resources">Resources <i class="fas fa-book"></i></h2>
@@ -175,7 +280,25 @@
     
         <iframe width ="560" height="255" style="border:none;"
         src = "iframe.html"> </iframe>
-</body>
+       
+        <footer>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Connect with us on social media</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p>&copy; 2024 My Hobbies. All rights reserved.</p>
+        </footer>
+        
+</body> 
+
 </html>
 
 
